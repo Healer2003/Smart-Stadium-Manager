@@ -1,7 +1,7 @@
 
 # Smart Stadium Manager (SSM)
 
-This project implements an **Intelligent Multi-Agent System (MAS)** for a Smart Stadium environment. Developed for **DCIT 403**, it follows the **Prometheus methodology** and utilizes the **SPADE framework** for agent development and **XMPP** for communication.
+This project implements an **Intelligent Multi-Agent System (MAS)** for a Smart Stadium environment. It follows the **Prometheus methodology** and utilizes the **SPADE framework** for agent development and **XMPP** for communication.
 
 ## 1. Environment Setup
 The system is designed to run in **GitHub Codespaces**. Ensure you have the SPADE framework installed:

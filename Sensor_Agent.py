@@ -11,19 +11,16 @@ class SensorAgent(Agent):
 
     class MonitorBehaviour(PeriodicBehaviour):
         async def run(self):
-            # Update the environment
             self.agent.env.update()
             a, b, m = self.agent.env.get_data()
             weather = self.agent.env.weather_condition
 
-            # Prepare message for coordinator
             msg = Message(to="stadium_ops@xmpp.jp")
             msg.set_metadata("performative", "inform")
             msg.body = f"{a},{b},{m}"
 
             await self.send(msg)
 
-            # Human-friendly log
             print(f"[SENSOR] Crowd levels checked: Gate A is {a}% full, "
                   f"Gate B is {b}% full. Pitch moisture: {m}%. Weather: {weather}.")
 

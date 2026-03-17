@@ -15,16 +15,16 @@ class StadiumEnvironment:
 
 
         if self.weather_condition == "Sunny":
-            # Sun dries the pitch a bit
+            
             self.pitch_moisture -= random.randint(1, 5)
         elif self.weather_condition == "Cloudy":
-            # Cloudy, small decrease
+          
             self.pitch_moisture -= random.randint(0, 2)
         elif self.weather_condition == "Rainy":
-            # Rain increases moisture
+            
             self.pitch_moisture += random.randint(5, 15)
 
-        # Keep moisture within 0-100%
+    
         if self.pitch_moisture < 0:
             self.pitch_moisture = 0
         elif self.pitch_moisture > 100:
